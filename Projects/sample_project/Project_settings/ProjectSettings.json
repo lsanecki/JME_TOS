@@ -1783,14 +1783,14 @@
                 "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
-                "OneTestForAllModule": 0,
+                "OneTestForAllModule": 1,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -1930,14 +1930,18 @@
                 "ShowMsg": "Zamknij Klapę",
                 "Delay": 10,
                 "SetFlag": 0,
-                "OneTestForAllModule": 0,
+                "OneTestForAllModule": 1,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
+                                        "Parameters": ["param1", "param2", "param3"]
+                                    },
+                                    {
+                                        "NameFun": "fun_c",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2080,11 +2084,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2227,11 +2231,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2374,11 +2378,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2521,11 +2525,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2668,11 +2672,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2815,11 +2819,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -2962,11 +2966,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -3109,11 +3113,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -3256,11 +3260,11 @@
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
@@ -3400,14 +3404,14 @@
                 "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
-                "OneTestForAllModule": 0,
+                "OneTestForAllModule": 1,
                 "Function": [
                                     {
-                                        "NameFun": "funA",
+                                        "NameFun": "fun_a",
                                         "Parameters": ["param1", "param2", "param3"]
                                     },
                                     {
-                                        "NameFun": "funB",
+                                        "NameFun": "fun_b",
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
