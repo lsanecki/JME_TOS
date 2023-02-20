@@ -2072,8 +2072,9 @@
             },
             {
                 "StepNr": 30,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Power ON",
+                "Description": "Załaczam napiecie 230V",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2218,8 +2219,9 @@
             },
             {
                 "StepNr": 40,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Press Finger - Check Soft",
+                "Description": "Opuszcza palce do sprawdzenia softu",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2364,8 +2366,9 @@
             },
             {
                 "StepNr": 50,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Check Soft",
+                "Description": "Sprawdza soft",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2510,8 +2513,9 @@
             },
             {
                 "StepNr": 60,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Press Finger - Allon",
+                "Description": "Opuszcza palce do sprawdzenia wszystkich segmentów wyświetlacza",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2656,8 +2660,9 @@
             },
             {
                 "StepNr": 70,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Check ALLon",
+                "Description": "Sprawdza wszystkie segmenty wyświetlacza",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2804,6 +2809,7 @@
                 "StepNr": 80,
                 "Title": "Start",
                 "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -2948,10 +2954,11 @@
             },
             {
                 "StepNr": 90,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Check buzzer",
+                "Description": "Sprawdza działanie buzzera",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
-                "SetFlag": 0,
+                "SetFlag": 1,
                 "OneTestForAllModule": 0,
                 "Function": [
                                     {
@@ -2963,7 +2970,7 @@
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
-                "NextStep": 100,
+                "NextStep": 110,
                 "FailTestNextStep": 120,
                 "Module": [
                     {
@@ -3094,8 +3101,9 @@
             },
             {
                 "StepNr": 100,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Save Result to Database",
+                "Description": "Zapisuje wynik testu do bazy danych",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -3109,7 +3117,7 @@
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
-                "NextStep": 110,
+                "NextStep": 120,
                 "FailTestNextStep": 120,
                 "Module": [
                     {
@@ -3240,8 +3248,9 @@
             },
             {
                 "StepNr": 110,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "Print Label",
+                "Description": "Drukuje etykiete",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
@@ -3255,7 +3264,7 @@
                                         "Parameters": ["param1", "param2", "param3"]
                                     }
                                 ],
-                "NextStep": 120,
+                "NextStep": 100,
                 "FailTestNextStep": 120,
                 "Module": [
                     {
@@ -3386,8 +3395,9 @@
             },
             {
                 "StepNr": 120,
-                "Title": "Start",
-                "Description": "Uruchamia test",
+                "Title": "End",
+                "Description": "Koniec testu",
+                "ShowMsg": "Uruchamiam test",
                 "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
