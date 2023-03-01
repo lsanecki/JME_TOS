@@ -16,8 +16,8 @@
                     "file": "label2.txt"
                 }
             ],
-            "EnableInitStep": 1,
-            "EnableFinalStep": 1
+            "EnableInitStep": 0,
+            "EnableFinalStep": 0
         },
         "InitStep": [
             {
@@ -1781,17 +1781,19 @@
                 "Title": "Start",
                 "Description": "Uruchamia test",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 20,
@@ -1804,12 +1806,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun1.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun1.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1817,12 +1821,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun2.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun2.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -1835,12 +1841,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun1.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun1.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1848,12 +1856,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun2.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun2.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -1866,12 +1876,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun1.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun1.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1879,12 +1891,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun2.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun2.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -1897,12 +1911,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun1.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun1.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun1_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1910,12 +1926,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun2.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun2.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun2_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -1928,21 +1946,24 @@
                 "Title": "WaitForCloseCover",
                 "Description": "Czekam na zamkniecie klapy urzadzenia",
                 "ShowMsg": "Zamknij Klapę",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_c",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 30,
@@ -1955,12 +1976,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun3.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun3.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1968,12 +1991,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun4.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun4.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -1986,12 +2011,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun3.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun3.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -1999,12 +2026,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun4.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun4.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2017,12 +2046,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun3.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun3.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2030,12 +2061,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun4.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun4.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2048,12 +2081,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun3.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun3.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun3_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2061,12 +2096,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun4.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun4.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun4_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2079,17 +2116,19 @@
                 "Title": "Power ON",
                 "Description": "Załaczam napiecie 230V",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 40,
@@ -2102,12 +2141,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun5.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun5.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2115,12 +2156,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun6.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun6.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2133,12 +2176,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun5.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun5.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2146,12 +2191,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun6.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun6.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2164,12 +2211,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun5.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun5.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2177,12 +2226,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun6.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun6.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2195,12 +2246,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun5.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun5.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun5_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2208,12 +2261,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun6.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun6.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun6_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2226,17 +2281,19 @@
                 "Title": "Press Finger - Check Soft",
                 "Description": "Opuszcza palce do sprawdzenia softu",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 50,
@@ -2249,12 +2306,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun7.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun7.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2262,12 +2321,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun8.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun8.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2280,12 +2341,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun7.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun7.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2293,12 +2356,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun8.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun8.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2311,12 +2376,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun7.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun7.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2324,12 +2391,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun8.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun8.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2342,12 +2411,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun7.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun7.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun7_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2355,12 +2426,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun8.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun8.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun8_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2373,17 +2446,19 @@
                 "Title": "Check Soft",
                 "Description": "Sprawdza soft",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 60,
@@ -2396,12 +2471,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun9.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun9.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2409,12 +2486,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun10.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun10.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2427,12 +2506,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun9.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun9.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2440,12 +2521,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun10.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun10.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2458,12 +2541,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun9.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun9.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2471,12 +2556,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun10.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun10.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2489,12 +2576,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun9.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun9.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun9_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2502,12 +2591,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun10.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun10.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun10_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2520,17 +2611,19 @@
                 "Title": "Press Finger - Allon",
                 "Description": "Opuszcza palce do sprawdzenia wszystkich segmentów wyświetlacza",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 70,
@@ -2543,12 +2636,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun11.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun11.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2556,12 +2651,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun12.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun12.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2574,12 +2671,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun11.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun11.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2587,12 +2686,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun12.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun12.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2605,12 +2706,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun11.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun11.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2618,12 +2721,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun12.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun12.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2636,12 +2741,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun11.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun11.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun11_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2649,12 +2756,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun12.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun12.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun12_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2667,17 +2776,19 @@
                 "Title": "Check ALLon",
                 "Description": "Sprawdza wszystkie segmenty wyświetlacza",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 80,
@@ -2690,12 +2801,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun13.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun13.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2703,12 +2816,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun14.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun14.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2721,12 +2836,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun13.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun13.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2734,12 +2851,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun14.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun14.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2752,12 +2871,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun13.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun13.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2765,12 +2886,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun14.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun14.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2783,12 +2906,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun13.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun13.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun13_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2796,12 +2921,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun14.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun14.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun14_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2814,17 +2941,19 @@
                 "Title": "Start",
                 "Description": "Uruchamia test",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 90,
@@ -2837,12 +2966,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun15.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun15.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2850,12 +2981,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun16.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun16.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2868,12 +3001,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun15.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun15.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2881,12 +3016,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun16.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun16.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2899,12 +3036,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun15.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun15.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2912,12 +3051,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun16.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun16.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2930,12 +3071,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun15.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun15.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun15_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2943,12 +3086,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun16.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun16.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun16_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -2961,17 +3106,19 @@
                 "Title": "Check buzzer",
                 "Description": "Sprawdza działanie buzzera",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 1,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 110,
@@ -2984,12 +3131,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun17.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun17.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -2997,12 +3146,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun18.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun18.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3015,12 +3166,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun17.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun17.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3028,12 +3181,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun18.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun18.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3046,12 +3201,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun17.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun17.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3059,12 +3216,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun18.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun18.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3077,12 +3236,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun17.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun17.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun17_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3090,12 +3251,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun18.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun18.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun18_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3108,17 +3271,19 @@
                 "Title": "Save Result to Database",
                 "Description": "Zapisuje wynik testu do bazy danych",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 1,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 120,
@@ -3131,12 +3296,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun19.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun19.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3144,12 +3311,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun20.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun20.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3162,12 +3331,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun19.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun19.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3175,12 +3346,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun20.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun20.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3193,12 +3366,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun19.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun19.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3206,12 +3381,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun20.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun20.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3224,12 +3401,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun19.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun19.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun19_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3237,12 +3416,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun20.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun20.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun20_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3255,17 +3436,19 @@
                 "Title": "Print Label",
                 "Description": "Drukuje etykiete",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
-                "SetFlag": 0,
+                "SetFlag": 1,
                 "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 100,
@@ -3278,12 +3461,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun21.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun21.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3291,12 +3476,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun22.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun22.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3309,12 +3496,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun21.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun21.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3322,12 +3511,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun22.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun22.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3340,12 +3531,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun21.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun21.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3353,12 +3546,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun22.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun22.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3371,12 +3566,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun21.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun21.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun21_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3384,12 +3581,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun22.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun22.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun22_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3402,17 +3601,19 @@
                 "Title": "End",
                 "Description": "Koniec testu",
                 "ShowMsg": "Uruchamiam test",
-                "Delay": 10,
                 "SetFlag": 0,
                 "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
                 "Function": [
                                     {
                                         "NameFun": "fun_a",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
                                         "NameFun": "fun_b",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ],
                 "NextStep": 0,
@@ -3425,12 +3626,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun23.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun23.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3438,12 +3641,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun24.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun24.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3456,12 +3661,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun23.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun23.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3469,12 +3676,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun24.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun24.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3487,12 +3696,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun23.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun23.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3500,12 +3711,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun24.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun24.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
@@ -3518,12 +3731,14 @@
                                 "Name": "L",
                                 "Function": [
                                     {
-                                        "NameFun": "fun23.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun23.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun23_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             },
@@ -3531,12 +3746,14 @@
                                 "Name": "R",
                                 "Function": [
                                     {
-                                        "NameFun": "fun24.1",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_1",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     },
                                     {
-                                        "NameFun": "fun24.2",
-                                        "Parameters": ["param1", "param2", "param3"]
+                                        "NameFun": "fun24_2",
+                                        "Parameters": ["param1", "param2", "param3"],
+                                        "Delay": 0
                                     }
                                 ]
                             }
