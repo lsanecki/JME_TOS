@@ -7,24 +7,7 @@ import Liblary.deviceFun
 import datetime
 import threading
 import queue
-import importlib
 import csv
-
-
-def run_background_method(function):
-    """
-    Uruchamia podaną funkcje/metodę w osobnym wątku (dekolator)
-    :param function: Funkcja/ Metoda do uruchomienia w osobnym wątku
-    :return:
-    """
-
-    def inside_function(*a, **kw):
-        worker = threading.Thread(target=function, args=a, kwargs=kw)
-        worker.start()
-
-        return worker
-
-    return inside_function
 
 
 class ProcessTest:
