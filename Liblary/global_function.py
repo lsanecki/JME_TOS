@@ -28,7 +28,7 @@ def convert_to_bool(_parameter):
     return False
 
 
-def run_background_method(function):
+def background_worker(function):
     """
     Uruchamia podaną funkcje/metodę w osobnym wątku (dekolator)
     :param function: Funkcja/ Metoda do uruchomienia w osobnym wątku

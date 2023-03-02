@@ -1,5 +1,4 @@
 import time
-
 from Liblary.libJson import *
 from Liblary.testStep import *
 from Liblary.global_function import *
@@ -81,36 +80,70 @@ class ProcessTest:
 
         self.test_listing = []
         self.run_project_test()
-        # show result test
 
+        # pokaz wynik testu
         self.show_test_result()
 
         if self.project_finally_enable:
             self.run_project_finally()
 
     def show_test_result(self):
-        modules = []
-        duts = []
-        for step_listing in self.test_listing:
-            modules.append(step_listing['Module'])
-            duts.append(step_listing['Dut'])
-        modules = list(set(modules))
-        duts = list(set(duts))
-        if self.debug:
-            print('Modules', modules)
-            print('Duts', duts)
+        """
+        Metoda przeszukuje self.test_listing i wyswietla wynik calego testu dla poszczegolnych gniazd
+        we wszystkich modułach
+        :return:
+        """
+
+        # wyszukuje nazwy gniazd i modulów
+        modules, test_sockets = self.find_name_test_socket_module()
+
         result_test = []
-        for module in modules:
-            for dut in duts:
-                status = self.search_status_test_by_step_nr(module, dut)
-                if module is not None and dut is not None:
+        # Sprawdza status testu przetestowanych wyrobów we wszystkich modulach i gniazdach
+        self.check_status_for_all_socket(modules, result_test, test_sockets)
+        print(result_test)
+
+    def check_status_for_all_socket(self, name_modules, result_test, name_test_sockets):
+        """
+        Sprawdza status testu dla wszystkich testowanych produktow
+        :param name_modules: Nazwy wszystkich modulów użytych w projekcie
+        :type name_modules: list
+        :param result_test: Zbiór wszystkich wyników testu z przypisanym gniazdem i modulem
+        :type result_test: list
+        :param name_test_sockets: Nazwy wszystkich gniazd testujacych
+        :type name_test_sockets: list
+        :return:
+        """
+
+        for module in name_modules:
+            for test_socket in name_test_sockets:
+                status = self.search_status_test_by_step_nr(module, test_socket)
+                if module is not None and test_socket is not None:
                     test = {
                         'Module': module,
-                        'Dut': dut,
+                        'Dut': test_socket,
                         'Status': status
                     }
                     result_test.append(test)
-        print(result_test)
+
+    def find_name_test_socket_module(self):
+        """
+        Wyszukuje wszystkie nazwy modulów i gniazd testujących
+        :return: Zwraca zbiór wszystkich nazw modułów i gniazd
+        :rtype: tuple
+        """
+
+        modules = []
+        test_sockets = []
+
+        for step_listing in self.test_listing:
+            modules.append(step_listing['Module'])
+            test_sockets.append(step_listing['Dut'])
+        modules = list(set(modules))
+        test_sockets = list(set(test_sockets))
+        if self.debug:
+            print('Modules', modules)
+            print('Duts', test_sockets)
+        return modules, test_sockets
 
     def run_project_init(self):
         """
@@ -144,7 +177,6 @@ class ProcessTest:
         if step_test.one_test_all_module:
             for function in step_test.fun_for_all_module:
                 _status = self.execute_function_for_all_module(function, step_test)
-                # print('_status: {}'.format(_status))
 
                 if not _status[0]:
                     return step_test.fail_nr
@@ -174,14 +206,22 @@ class ProcessTest:
                                               args=(_lib_fun, module, test_socket, _step_test, threads,))
                 thread_fun.start()
 
-        # self.thread_join(threads)
+        # czeka za zakonczenie wszystkich wątków dla danego kroku
         self.thread_function_join(threads)
 
-        # self.thread_load_return_data(threads)
-        _status = []
-        self.load_return_function_info(_status, threads)
+        # wczytuje z wątków wyniki zakonczonych testów dla danego kroku
+        self.load_return_function_info(threads)
 
-    def load_return_function_info(self, _status, threads):
+    def load_return_function_info(self, threads):
+        """
+        Wczytuje wyniki zakonczonych testów dla danego kroku
+        :param threads: Lista wszystkich wątków dla danego korku testu
+        :type threads: list
+        :return: Zwraca status wszystkich zakończonych testów dla danego kroku
+        :rtype: list
+        """
+
+        _status = []
         for thread_fun in threads:
             recv_info = thread_fun[1].get()
             if self.debug:
@@ -195,12 +235,35 @@ class ProcessTest:
                 print('thread_fun[2]: {}'.format(thread_fun[2]))
             self.test_listing.append(thread_fun[2])
             _status.append(thread_fun[2]['Status'])
+        return _status
 
-    def thread_function_join(self, threads):
+    @staticmethod
+    def thread_function_join(threads):
+        """
+        Czeka na zakonczenie wszystkich wątków znajdujących w podanej liście
+        :param threads: Lista wszystkich aktywanych wątków dla danego kroku
+        :return:
+        """
+
         for thread_fun in threads:
             thread_fun[0].join()
 
     def thread_run_socket(self, _lib_fun, _module, _test_socket, _step_test, _threads):
+        """
+        Uruchamia testy dla trybu równoległego testowania gniazd
+        :param _lib_fun: Moduł zaimportowanymi funkcjami projektu
+        :type _lib_fun: ModuleType
+        :param _module: Wybrany moduł testujący
+        :type _module: dict
+        :param _test_socket: Wybrane gniazdo testujące
+        :type _test_socket: dict
+        :param _step_test: Informacje o aktualnie wykonywanym kroku
+        :type _step_test: StepTest
+        :param _threads: Lista aktywnych wątków dla danego kroku
+        :type _threads: list
+        :return:
+        """
+
         for _function in _test_socket['Function']:
             if self.search_status_test_by_step_nr(_module['Name'], _test_socket['Name']) or _step_test.always_run:
                 if self.debug:
@@ -214,6 +277,19 @@ class ProcessTest:
 
     @staticmethod
     def show_function_info(_function, _step_nr, _module=None, _test_socket=None):
+        """
+        Pokazwuje informacje o aktualnie wywołanej funkcji
+        :param _function: Dane wybranej funkcji
+        :type _function: dict
+        :param _step_nr: Numer kroku
+        :type _step_nr: int
+        :param _module: Dane modułu
+        :type _module: dict
+        :param _test_socket: Dane gniazda testujacego
+        :type _test_socket: dict
+        :return:
+        """
+
         _name_module = _module['Name']
         _name_dut = _test_socket['Name']
         _name_function = _function['NameFun']
@@ -227,15 +303,43 @@ class ProcessTest:
             f'Parametry: {_function_parameters}')
 
     def execute_function(self, _function, _lib_fun, _threads, fun_info):
+        """
+        Uruchamia wybraną funkcje
+        :param _function: Dane funkcji do uruchomienia
+        :type _function: dict
+        :param _lib_fun: Moduł zaimportowanymi funkcjami projektu
+        :type _lib_fun: ModuleType
+        :param _threads: Lista aktywnych wątków
+        :type _threads: list
+        :param fun_info: Informacje danej funkcji potrzebne do dalszej analizy
+        :return: Zwraca uruchomiony wątek z wybraną funkcją
+        :rtype: threading.Thread
+
+        """
+
         que = queue.Queue()
-        thread_fun = self.run_background(_lib_fun, _function['NameFun'], _function['Parameters'], que,
-                                         _function['Delay'])
+        thread_fun = self.run_background_worker(_lib_fun, _function['NameFun'], _function['Parameters'], que,
+                                                _function['Delay'])
         fun_step = [thread_fun, que, fun_info]
         _threads.append(fun_step)
         return thread_fun
 
     @staticmethod
     def prepare_function_info(_name_function, _step_test, _name_module=None, _name_dut=None):
+        """
+        Konwertuje dane funkcji przekazania w listing
+        :param _name_function: Nazwa aktualnej funkcji
+        :type _name_function: str
+        :param _step_test: Informacje o aktualnie wykonywanym kroku
+        :type _step_test: StepTest
+        :param _name_module: Nazwa aktualnego modułu
+        :type _name_module: str
+        :param _name_dut: Nazwa aktualnego gniazda testujacego
+        :type _name_dut: str
+        :return: Zwraca przygotowane dane o funkcji
+        :rtype: dict
+        """
+
         function_information = {
             'Step': _step_test.nr,
             'Name': _step_test.title,
@@ -269,7 +373,6 @@ class ProcessTest:
     def execute_function_with_flag(self, _function, _lib_fun, _module, _step_test, _test_socket):
         """
         Metoda wykonuje funkcje dla danego gniazda DUT krok po kroku (flaga wlaczona)
-
         :param _function: Wykonywana funkcja
         :type _function: dict
         :param _lib_fun: Moduł zaimportowanymi funkcjami projektu
@@ -282,6 +385,7 @@ class ProcessTest:
         :type _test_socket: dict
         :return:
         """
+
         if self.search_status_test_by_step_nr(_module['Name'], _test_socket['Name']) or _step_test.always_run:
             if self.debug:
                 self.show_function_info(_function, _step_test.nr, _module['Name'], _test_socket['Name'])
@@ -291,11 +395,9 @@ class ProcessTest:
                                                   _test_socket['Name'])
             self.execute_function(_function, _lib_fun, threads, fun_info)
 
-            _status = []
-
             self.thread_function_join(threads)
 
-            self.load_return_function_info(_status, threads)
+            self.load_return_function_info(threads)
 
     def execute_function_for_all_module(self, _function, _step_test):
         """
@@ -304,7 +406,8 @@ class ProcessTest:
         :type _function: dict
         :param _step_test: Informacje o aktualnie wykonywanym kroku
         :type _step_test: StepTest
-        :return:
+        :return: Zwraca liste odczytanych statusów testu
+        :rtype: list
         """
 
         if self.debug:
@@ -318,9 +421,7 @@ class ProcessTest:
 
         self.thread_function_join(threads)
 
-        _status = []
-
-        self.load_return_function_info(_status, threads)
+        _status = self.load_return_function_info(threads)
 
         return _status
 
@@ -341,7 +442,8 @@ class ProcessTest:
         # print(step_test.show_message)
         return now, step_test
 
-    def load_step_parameters(self, _nr_step, _step, _step_test):
+    @staticmethod
+    def load_step_parameters(_nr_step, _step, _step_test):
         """
         Metoda przypisuje dane wykonywanego kroku do objektu StepTest
         :param _nr_step: Numer wybranego kroku
@@ -367,7 +469,7 @@ class ProcessTest:
 
     def search_status_test_by_step_nr(self, _module_name=None, _dut_name=None):
         """
-        Metoda szuka status
+        Metoda szuka status dla podanego modułu i kroku
         :param _module_name: Nazwa modulu
         :type _module_name: str
         :param _dut_name: Nazwa gniazda
@@ -420,7 +522,7 @@ class ProcessTest:
         fields = []
         for name, dict_ in self.test_listing[0].items():
             fields.append(name)
-        filename = f"Projects/{self.project_name}/Test_listing/test_listing.csv"
+        filename = "Projects/{}/Test_listing/test_listing.csv".format(self.project_name)
         with open(filename, 'w', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fields, delimiter=';', quotechar='"',
                                     quoting=csv.QUOTE_MINIMAL)
@@ -428,14 +530,27 @@ class ProcessTest:
             writer.writeheader()
             writer.writerows(self.test_listing)
 
-    @run_background_method
-    def run_background(self, lib_fun, function_name, function_parameters, que, delay=0):
+    @background_worker
+    def run_background_worker(self, lib_fun, function_name, function_parameters, que, delay=0):
+        """
+        Uruchamia funkcje w nowo utworzonym wątku
+        :param lib_fun: Moduł zaimportowanymi funkcjami projektu
+        :type lib_fun: ModuleType
+        :param function_name: Nazwa uruchomionej funkcji
+        :type function_name: str
+        :param function_parameters: Parametry wejściowe funkcji
+        :type function_parameters: list
+        :param que: Obiekt przechwytujący dane z uruchomionego wątku
+        :type que: queue.Queue
+        :param delay: Opóżnienie w uruchomieniu wątku (wartości w ms)
+        :return:
+        """
+
         time.sleep(delay / 1000)
         start_time = datetime.datetime.now()
         item = getattr(lib_fun, function_name)
         if callable(item):
             return_ext_module = item(function_parameters)
-            # print('return_ext_module: {}'.format(return_ext_module))
 
             end_time = datetime.datetime.now()
 
