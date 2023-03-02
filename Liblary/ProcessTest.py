@@ -87,18 +87,6 @@ class ProcessTest:
         self.project_finally_enable = convert_to_bool(self.project_setting['EnableFinalStep'])
         self.project_function = 'Projects.{}.{}'.format(self.project_name, self.project_name)
 
-    @staticmethod
-    def dynamic_import(_import_module):
-        """
-        Metoda importuje modul z funkcjami dla danego projektu
-        :param _import_module: Nazwa modułu który zostanie zaimportowany
-        :type _import_module: str
-        :return : Zwraca zaimportowany moduł
-        :rtype: ModuleType
-        """
-
-        return importlib.import_module(_import_module)
-
     def run(self):
         """
         Metoda uruchamia testowanie według wytycznych z pliku ustawień projektu
@@ -178,7 +166,7 @@ class ProcessTest:
                 if not _status[0]:
                     return step_test.fail_nr
         else:
-            lib_fun = self.dynamic_import(self.project_function)
+            lib_fun = dynamic_import(self.project_function)
             if step_test.flag:
                 self.select_function_with_flag(lib_fun, step_test)
             else:
