@@ -2,6 +2,7 @@ import time
 
 from Liblary.libJson import *
 from Liblary.testStep import *
+from Liblary.global_function import *
 import Liblary.deviceFun
 import datetime
 import threading
@@ -11,15 +12,17 @@ import csv
 
 
 def run_background_method(function):
-    # print('Start: {}'.format(function.__name__))
+    """
+    Uruchamia podaną funkcje/metodę w osobnym wątku (dekolator)
+    :param function: Funkcja/ Metoda do uruchomienia w osobnym wątku
+    :return:
+    """
 
     def inside_function(*a, **kw):
         worker = threading.Thread(target=function, args=a, kwargs=kw)
         worker.start()
 
         return worker
-
-    # print('Stop: {}'.format(function.__name__))
 
     return inside_function
 
@@ -69,20 +72,6 @@ class ProcessTest:
         self.project_test = _load_project_settings['Project']['TestStep']
         self.project_finally = _load_project_settings['Project']['FinalStep']
 
-    @staticmethod
-    def convert_to_bool(_parameter):
-        """
-        Metoda do konwersji parametru typu int na typ bool (dla 1 przyjmuje wartość True)
-        :param _parameter: Parametr do konwersji na typ bool
-        :type _parameter: int
-        :return: Zwraca przekonwertowaną na typ bool wartość
-        :rtype: bool
-        """
-
-        if _parameter == 1:
-            return True
-        return False
-
     def load_project_parameters(self):
         """
         Przypisuje parametry projektu
@@ -94,8 +83,8 @@ class ProcessTest:
         self.project_test_module_count = self.project_setting['CountTestModule']
         self.project_socket_in_module_count = self.project_setting['Sockets']
         self.project_labels = self.project_setting['Labels']
-        self.project_init_enable = self.convert_to_bool(self.project_setting['EnableInitStep'])
-        self.project_finally_enable = self.convert_to_bool(self.project_setting['EnableFinalStep'])
+        self.project_init_enable = convert_to_bool(self.project_setting['EnableInitStep'])
+        self.project_finally_enable = convert_to_bool(self.project_setting['EnableFinalStep'])
         self.project_function = 'Projects.{}.{}'.format(self.project_name, self.project_name)
 
     @staticmethod
@@ -397,13 +386,13 @@ class ProcessTest:
         _step_test.title = _step['Title']
         _step_test.description = _step['Description']
         _step_test.show_message = _step['ShowMsg']
-        _step_test.flag = self.convert_to_bool(_step['SetFlag'])
-        _step_test.one_test_all_module = self.convert_to_bool(_step['OneTestForAllModule'])
+        _step_test.flag = convert_to_bool(_step['SetFlag'])
+        _step_test.one_test_all_module = convert_to_bool(_step['OneTestForAllModule'])
         _step_test.fun_for_all_module = _step['Function']
         _step_test.next_nr = _step['NextStep']
         _step_test.fail_nr = _step['FailTestNextStep']
         _step_test.module = _step['Module']
-        _step_test.always_run = self.convert_to_bool(_step['AlwaysRun'])
+        _step_test.always_run = convert_to_bool(_step['AlwaysRun'])
 
     def search_status_test_by_step_nr(self, _module_name=None, _dut_name=None):
         """
