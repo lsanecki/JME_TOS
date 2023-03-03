@@ -13,7 +13,7 @@ def main():
     tester = ProcessTest(path_project)
 
     tester.run()
-    tester.show_test_listing()
+    # tester.show_test_listing()
 
 
 if __name__ == '__main__':

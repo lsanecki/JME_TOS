@@ -76,16 +76,20 @@ class ProcessTest:
         """
 
         if self.project_init_enable:
+            self.test_listing = []
             self.run_project_init()
+            self.show_test_listing('init_listing')
 
         self.test_listing = []
         self.run_project_test()
-
         # pokaz wynik testu
         self.show_test_result()
+        self.show_test_listing('test_listing')
 
         if self.project_finally_enable:
+            self.test_listing = []
             self.run_project_finally()
+            self.show_test_listing('final_listing')
 
     def show_test_result(self):
         """
@@ -151,7 +155,10 @@ class ProcessTest:
         :return:
         """
 
-        pass
+        step_next_nr = 10
+
+        while step_next_nr != 0:
+            step_next_nr = self.run_step(step_next_nr, self.project_init)
 
     def run_project_test(self):
         """
@@ -162,18 +169,19 @@ class ProcessTest:
         step_next_nr = 10
 
         while step_next_nr != 0:
-            step_next_nr = self.run_step(step_next_nr)
+            step_next_nr = self.run_step(step_next_nr, self.project_test)
 
-    def run_step(self, _nr_step):
+    def run_step(self, _nr_step, project_test):
         """
         Metoda do wykonania wybranego kroku testu
         :param _nr_step: Numer kroku testu
         :type _nr_step: int
+        :param project_test:
         :return: Zwraca numer kroku nastepnego testu
         :rtype: int
         """
 
-        now, step_test = self.prepare_step(_nr_step)
+        now, step_test = self.prepare_step(_nr_step, project_test)
         if step_test.one_test_all_module:
             for function in step_test.fun_for_all_module:
                 _status = self.execute_function_for_all_module(function, step_test)
@@ -425,17 +433,18 @@ class ProcessTest:
 
         return _status
 
-    def prepare_step(self, _nr_step):
+    def prepare_step(self, _nr_step, project_test):
         """
         Metoda wczytuje krok do testowania
         :param _nr_step: Numer kroku do wczytania
         :type _nr_step: int
+        :param project_test:
         :return: Zwraca parametru wczytanego kroku
         :rtype: tuple
         """
 
         step_test = TestStep()
-        step = next((sub for sub in self.project_test if sub['StepNr'] == _nr_step), None)
+        step = next((sub for sub in project_test if sub['StepNr'] == _nr_step), None)
         self.load_step_parameters(_nr_step, step, step_test)
         now = datetime.datetime.now()
         print('[{}] {}: {} - {}'.format(now, step_test.nr, step_test.title, step_test.description))
@@ -498,12 +507,17 @@ class ProcessTest:
         :return:
         """
 
-        pass
+        step_next_nr = 10
 
-    def show_test_listing(self, _save_csv=True):
+        while step_next_nr != 0:
+            step_next_nr = self.run_step(step_next_nr, self.project_finally)
+
+    def show_test_listing(self, name_file, _save_csv=True):
         """
         Metoda wyświetla liste przeprowadzonych testow wraz z danymi
         :param _save_csv: Parametr określa czy zapisanać liste testow do pliku csv
+        :type _save_csv: bool
+        :param name_file:
         :return:
         """
 
@@ -511,18 +525,19 @@ class ProcessTest:
             print(step_listing)
 
         if _save_csv:
-            self.save_listing_to_csv()
+            self.save_listing_to_csv(name_file)
 
-    def save_listing_to_csv(self):
+    def save_listing_to_csv(self, name_file):
         """
         Metoda zapisuje liste wykonanych testów do pliku csv
+        :param name_file:
         :return:
         """
 
         fields = []
         for name, dict_ in self.test_listing[0].items():
             fields.append(name)
-        filename = "Projects/{}/Test_listing/test_listing.csv".format(self.project_name)
+        filename = "Projects/{}/Test_listing/{}.csv".format(self.project_name, name_file)
         with open(filename, 'w', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fields, delimiter=';', quotechar='"',
                                     quoting=csv.QUOTE_MINIMAL)

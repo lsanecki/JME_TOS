@@ -1,7 +1,6 @@
 import random
 import time
 
-
 min_time = 0
 max_time = 1000
 
@@ -11,6 +10,7 @@ def fun1_1(param):
     print('fun1_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -20,6 +20,7 @@ def fun1_2(param):
     print('fun1_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -29,6 +30,7 @@ def fun2_1(param):
     print('fun2_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -38,6 +40,7 @@ def fun2_2(param):
     print('fun2_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -47,6 +50,7 @@ def fun3_1(param):
     print('fun3_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -56,6 +60,7 @@ def fun3_2(param):
     print('fun3_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -65,6 +70,7 @@ def fun4_1(param):
     print('fun4_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -74,6 +80,7 @@ def fun4_2(param):
     print('fun4_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -83,6 +90,7 @@ def fun5_1(param):
     print('fun5_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -92,6 +100,7 @@ def fun5_2(param):
     print('fun5_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -101,6 +110,7 @@ def fun6_1(param):
     print('fun6_1 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -110,6 +120,7 @@ def fun6_2(param):
     print('fun6_2 input: {}'.format(param))
     status = True
     error_info = "0"
+    value = None
 
     return status, error_info
 
@@ -432,6 +443,105 @@ def fun24_1(param):
 def fun24_2(param):
     time.sleep(random.randint(min_time, max_time) / 1000)
     print('fun24_2 input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def check_camera(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('check_camera input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def check_barcode_reader(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('check_barcode_reader input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def detect_pcb_in_dut(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('detect_pcb_in_dut input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def read_barcode(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('read_barcode input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def press_fingers(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('press_fingers input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def check_pattern(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('check_pattern input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def check_buzzer(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('check_buzzer input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def print_label(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('print_label input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def save_test_result_db(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('save_test_result_db input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def set_power_matrix(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('set_power_matrix input: {}'.format(param))
+    status = True
+    error_info = "0"
+
+    return status, error_info
+
+
+def power_230v(param):
+    time.sleep(random.randint(min_time, max_time) / 1000)
+    print('power_230v input: {}'.format(param))
     status = True
     error_info = "0"
 
