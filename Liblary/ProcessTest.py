@@ -239,6 +239,10 @@ class ProcessTest:
             thread_fun[2]['Date'] = recv_info['Date']
             thread_fun[2]['TestTime'] = recv_info['TestTime']
             thread_fun[2]['EndDate'] = recv_info['EndDate']
+            thread_fun[2]['Input'] = recv_info['Input']
+            thread_fun[2]['Output'] = recv_info['Output']
+            if recv_info['Serial'] is not None:
+                thread_fun[2]['Serial'] = recv_info['Serial']
             if self.debug:
                 print('thread_fun[2]: {}'.format(thread_fun[2]))
             self.test_listing.append(thread_fun[2])
@@ -358,7 +362,10 @@ class ProcessTest:
             'ErrorInformation': None,
             'Date': None,
             'TestTime': None,
-            'EndDate': None
+            'EndDate': None,
+            'Input': None,
+            'Output': None,
+            'Serial': None
         }
 
         return function_information
@@ -566,11 +573,15 @@ class ProcessTest:
         item = getattr(lib_fun, function_name)
         if callable(item):
             return_ext_module = item(function_parameters)
+            serial = None
+            if len(return_ext_module) > 2:
+                serial = return_ext_module[2]['Serial']
 
             end_time = datetime.datetime.now()
 
             step_information = {'Step': None, 'Name': None, 'Module': None, 'Dut': None, 'NameFunction': function_name,
                                 'Status': return_ext_module[0], 'ErrorInformation': return_ext_module[1],
-                                'Date': start_time, 'TestTime': end_time - start_time, 'EndDate': end_time}
+                                'Date': start_time, 'TestTime': end_time - start_time, 'EndDate': end_time,
+                                'Input': function_parameters, 'Output': return_ext_module, 'Serial': serial}
 
             que.put(step_information)

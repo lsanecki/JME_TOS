@@ -1,0 +1,273 @@
+{
+    "Project":
+    {
+        "Settings" : {
+            "Name": "Mercury_TS2",
+            "Index": "8071222_M_TS_1.3.10",
+            "Version": "0.1.1",
+            "Labels": [
+                {
+                    "name": "Label1",
+                    "file": "label1.txt"
+                },
+                {
+                    "name": "Label2",
+                    "file": "label2.txt"
+                }
+            ],
+            "Soft": [
+                {
+                    "name": "soft1",
+                    "file": "soft1.hex",
+                    "parameters": ["param1", "param2", "param3"]
+                },
+                {
+                    "name": "soft2",
+                    "file": "soft2.hex",
+                    "parameters": ["param1", "param2", "param3"]
+                }
+            ],
+            "Devices": [
+                {
+                    "Name": "Tester",
+                    "Version": "0.1.0",
+                    "Modules": [
+                {
+                    "Name": "module1",
+                    "Sockets": [
+                        {
+                            "Name": "dut_left"
+                        },
+                        {
+                            "Name": "dut_right"
+                        }
+                    ]
+                },
+                {
+                    "Name": "module2",
+                    "Sockets": [
+                        {
+                            "Name": "dut_left"
+                        },
+                        {
+                            "Name": "dut_right"
+                        }
+                    ]
+                },
+                {
+                    "Name": "module3",
+                    "Sockets": [
+                        {
+                            "Name": "dut_left"
+                        },
+                        {
+                            "Name": "dut_right"
+                        }
+                    ]
+                },
+                {
+                    "Name": "module4",
+                    "Sockets": [
+                        {
+                            "Name": "dut_left"
+                        },
+                        {
+                            "Name": "dut_right"
+                        }
+                    ]
+                }
+            ]
+                }
+            ],
+            "EnableInitStep": 1,
+            "EnableFinalStep": 1
+        },
+        "InitStep": [
+            {
+                "Name": "Start",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "pause",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "WaitForClose",
+                "FailTestNextStep": "Koniec"
+            }
+        ],
+        "TestStep": [
+            {
+                "Name": "Start",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "pause",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun_a",
+                                        "Parameters": [250, 100, "test"],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun_c",
+                                        "Parameters": [20, 0, "test2"],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "WaitForClose",
+                "FailTestNextStep": "SaveResult"
+            },
+            {
+                "Name": "WaitForClose",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "pause",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "PowerON",
+                "FailTestNextStep": "SaveResult"
+            },
+            {
+                "Name": "PowerON",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "fun5_2",
+                                        "Parameters": ["Param1", "Param2", "Param3"],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun6_1",
+                                        "Parameters": ["Param1", "Param2", "Param3"],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun6_2",
+                                        "Parameters": ["Param1", "Param2", "Param3"],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun7_2",
+                                        "Parameters": ["Param1", "Param2", "Param3"],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "Buzzer",
+                "FailTestNextStep": "SaveResult"
+            },
+            {
+                "Name": "Buzzer",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 1,
+                "OneTestForAllModule": 0,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "fun1_1",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun1_2",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun2_2",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "PowerOFF",
+                "FailTestNextStep": "SaveResult"
+            },
+            {
+                "Name": "PowerOFF",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 0,
+                "AlwaysRun": 1,
+                "Function": [
+                                    {
+                                        "NameFun": "fun9_2",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun10_1",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    },
+                                    {
+                                        "NameFun": "fun10_2",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "SaveResult",
+                "FailTestNextStep": "SaveResult"
+            },
+            {
+                "Name": "SaveResult",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "pause",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "Koniec",
+                "FailTestNextStep": "Koniec"
+            }
+        ],
+        "FinalStep": [
+            {
+                "Name": "Start",
+                "Description": "Uruchamia test",
+                "ShowMsg": "Uruchamiam test",
+                "SetFlag": 0,
+                "OneTestForAllModule": 1,
+                "AlwaysRun": 0,
+                "Function": [
+                                    {
+                                        "NameFun": "pause",
+                                        "Parameters": [250],
+                                        "Delay": 0
+                                    }
+                                ],
+                "NextStep": "WaitForClose",
+                "FailTestNextStep": "Koniec"
+            }
+        ]
+    }
+}

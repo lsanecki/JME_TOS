@@ -12,6 +12,8 @@ def main():
     tester = ProcessTest(path_project)
 
     tester.run()
+
+    print('ID: {}'.format(id(tester)))
     # tester.show_test_listing()
 
 

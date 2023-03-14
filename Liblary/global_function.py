@@ -1,5 +1,6 @@
 import importlib
 import threading
+import platform
 
 
 def dynamic_import(_import_module):
@@ -12,20 +13,6 @@ def dynamic_import(_import_module):
     """
 
     return importlib.import_module(_import_module)
-
-
-def convert_to_bool(_parameter):
-    """
-    Metoda do konwersji parametru typu int na typ bool (dla 1 przyjmuje wartość True)
-    :param _parameter: Parametr do konwersji na typ bool
-    :type _parameter: int
-    :return: Zwraca przekonwertowaną na typ bool wartość
-    :rtype: bool
-    """
-
-    if _parameter == 1:
-        return True
-    return False
 
 
 def background_worker(function):
@@ -42,3 +29,22 @@ def background_worker(function):
         return worker
 
     return inside_function
+
+
+def is_platform_windows():
+    """
+    Sprawdza czy korzystamy z systemu windows
+    :return: Zwraca informacje czy korzystamy z windowsa
+    :rtype: bool
+    """
+    return platform.system() == "Windows"
+
+
+def is_platform_linux():
+    """
+    Sprawdza czy korzystamy z systemu linux
+    :return: Zwraca informacje czy korzystamy z linuxa
+    :rtype: bool
+    :return:
+    """
+    return platform.system() == "Linux"

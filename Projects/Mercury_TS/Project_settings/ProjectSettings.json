@@ -16,6 +16,18 @@
                     "file": "label2.txt"
                 }
             ],
+            "Soft": [
+                {
+                    "name": "soft1",
+                    "file": "soft1.hex",
+                    "parameters": ["param1", "param2", "param3"]
+                },
+                {
+                    "name": "soft2",
+                    "file": "soft2.hex",
+                    "parameters": ["param1", "param2", "param3"]
+                }
+            ],
             "EnableInitStep": 1,
             "EnableFinalStep": 1
         },
