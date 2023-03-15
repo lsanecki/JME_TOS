@@ -48,7 +48,7 @@ class ProcessTest:
         _project_directory = "Projects"
         _setting_project_path = f"{_current_directory}/{_project_directory}/{name_project}/"
         self.project = ProjectTestSupport(_setting_project_path)
-        self.project.load_modules(self.tester.name, self.tester.version)
+        self.project.load_test_modules(self.tester.name, self.tester.version)
 
     def start(self):
         """
@@ -56,12 +56,12 @@ class ProcessTest:
         :return:
         """
 
-        if self.project.init_enable:
+        if self.project.initialization_enabled:
             self.start_initialization()
 
         self.start_test()
 
-        if self.project.final_enable:
+        if self.project.finalization_enabled:
             self.start_finalization()
 
     def start_initialization(self):
@@ -77,7 +77,7 @@ class ProcessTest:
 
         while _name_step != "Koniec":
             # krok o nazwie koniec kończy dany process
-            _name_step = self.perform_step(_name_step, self.project.init_test)
+            _name_step = self.perform_step(_name_step, self.project.test_initialization)
 
         self.show_log('init_listing')
 
@@ -182,7 +182,7 @@ class ProcessTest:
         """
 
         lib_fun = self.import_project_procedures()
-        for module in self.project.modules:
+        for module in self.project.test_modules:
             for socket in module['Sockets']:
                 for function in current_step['Function']:
                     self.run_procedure_for_step_by_step_mode(current_step, function, lib_fun, module, socket)
@@ -257,7 +257,7 @@ class ProcessTest:
 
         lib_fun = self.import_project_procedures()
         threads = []
-        for module in self.project.modules:
+        for module in self.project.test_modules:
             for socket in module['Sockets']:
                 thread_fun = threading.Thread(target=self.call_test_socket_in_separate_thread,
                                               args=(lib_fun, module, socket, current_step, threads,))
@@ -277,7 +277,7 @@ class ProcessTest:
         lib_fun = dynamic_import(project_function)
         if self.debug:
             print(lib_fun.__name__)
-            print(self.project.modules)
+            print(self.project.test_modules)
         return lib_fun
 
     def receive_data_from_threads(self, _status, threads):
@@ -411,11 +411,11 @@ class ProcessTest:
         # print(f'Run_final: {self.project.final_test}')
 
         _name_step = "Start"  # nazwa kroku który rozpoczyna proces
-        print(self.project.final_test)
+        print(self.project.test_finalization)
 
         while _name_step != "Koniec":
             # krok o nazwie koniec kończy dany process
-            _name_step = self.perform_step(_name_step, self.project.final_test)
+            _name_step = self.perform_step(_name_step, self.project.test_finalization)
 
         self.show_log('final_listing')
 

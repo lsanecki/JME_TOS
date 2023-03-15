@@ -38,10 +38,10 @@ class DeviceTesterService:
         :rtype: str
         """
 
-        list_header = []
-        for name, dict_ in self.settings.items():
-            list_header.append(name)
-        return list_header[0]
+        _list_header = []
+        for _name, dict_ in self.settings.items():
+            _list_header.append(_name)
+        return _list_header[0]
 
     @staticmethod
     def _get_id():
@@ -52,5 +52,5 @@ class DeviceTesterService:
         """
 
         if is_platform_windows():
-            current_machine_id = subprocess.check_output('wmic csproduct get uuid').strip()
-            return current_machine_id[41:].decode('utf-8').strip()
+            _current_machine_id = subprocess.check_output('wmic csproduct get uuid').strip()
+            return _current_machine_id[41:].decode('utf-8').strip()
