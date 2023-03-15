@@ -505,6 +505,8 @@ class ProcessTest:
         :return:
         """
 
+        name_file = add_data_to_name(name_file, self.tester.name, self.project.name_project)
+
         _fields = []
         for name, dict_ in self.step_log[0].items():
             _fields.append(name)

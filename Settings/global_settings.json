@@ -1,23 +1,27 @@
 {
   "Tester": {
-    "version": "0.1.0",
-    "devices": [
+    "version": "0.1.0"
+  },
+  "devices": [
       {
         "Name": "SignalMatrix",
-        "InputData": ["100.100.0.10", 5000]
+        "InputData": ["Ethernet", "100.100.0.10", 5000]
       },
       {
         "Name": "PowerMatrix",
-        "InputData": ["100.100.0.11", 5000]
+        "InputData": ["Ethernet", "100.100.0.11", 5000]
       },
       {
         "Name": "Printer",
-        "InputData": ["100.100.1.50", 9100]
+        "InputData": ["Ethernet", "100.100.1.50", 9100]
       },
       {
         "Name": "Measurer",
-        "InputData": ["100.99.0.10", 5000]
+        "InputData": ["Ethernet", "100.99.0.10", 5000]
+      },
+      {
+        "Name": "Sniffer",
+        "InputData": ["SerialPort", "COM11", 9600]
       }
     ]
-  }
 }

@@ -1,6 +1,7 @@
 import importlib
 import threading
 import platform
+import datetime
 
 
 def dynamic_import(_import_module):
@@ -48,3 +49,16 @@ def is_platform_linux():
     :return:
     """
     return platform.system() == "Linux"
+
+
+def add_data_to_name(name, device_name, project_name):
+    _date_now = datetime.datetime.now()
+    _temp_str_date = str(_date_now)
+
+    _temp_str_date = _temp_str_date.replace(" ", "_")
+    _temp_str_date = _temp_str_date.replace(":", "_")
+    _temp_str_date = _temp_str_date.replace(".", "_")
+
+    name = "{}_{}_{}_{}".format(device_name, project_name, name, _temp_str_date)
+
+    return name

@@ -28,7 +28,7 @@ class DeviceTesterService:
         self.settings = JsonSettingSupport.load_file(self.path_setting)
         self.name = self._get_name()
         self.version = self.settings[self.name]['version']
-        self.devices_included = self.settings[self.name]['devices']
+        self.devices_included = self.settings['devices']
         self.id = self._get_id()
 
     def _get_name(self):
