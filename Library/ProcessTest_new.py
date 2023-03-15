@@ -73,6 +73,14 @@ class ProcessTest:
 
         # print(f'Run_init: {self.project.init_test}')
 
+        _name_step = "Start"  # nazwa kroku który rozpoczyna proces
+
+        while _name_step != "Koniec":
+            # krok o nazwie koniec kończy dany process
+            _name_step = self.perform_step(_name_step, self.project.init_test)
+
+        self.show_log('init_listing')
+
     def start_test(self):
         """
         Uruchamia testowanie
@@ -401,6 +409,16 @@ class ProcessTest:
 
         self.listing = []
         # print(f'Run_final: {self.project.final_test}')
+
+        _name_step = "Start"  # nazwa kroku który rozpoczyna proces
+        print(self.project.final_test)
+
+        while _name_step != "Koniec":
+            # krok o nazwie koniec kończy dany process
+            _name_step = self.perform_step(_name_step, self.project.final_test)
+
+        self.show_log('final_listing')
+
 
     @background_worker
     def run_background_worker(self, lib_fun, function_name, function_parameters, que, delay, lib_dut=None):
