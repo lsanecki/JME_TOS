@@ -1,7 +1,7 @@
 import json
 
 
-class JsonSetting:
+class JsonSettingSupport:
     def __init__(self):
         pass
 
@@ -73,7 +73,7 @@ class JsonSetting:
 
 def main():
     # print(type(JsonSetting.load_file("settings/global.json")))
-    set_json = JsonSetting.load_file("settings/global.json")
+    set_json = JsonSettingSupport.load_file("settings/global.json")
     print(set_json)
     #JsonSetting.save_file("settings/", set_json)
 

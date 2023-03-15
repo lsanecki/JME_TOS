@@ -1,8 +1,8 @@
-from Library.libJson import *
-from Library.global_function import *
+from Library.json_settings_support import *
+from Library.global_procedures import *
 
 
-class ProjectTestOS:
+class ProjectTestSupport:
     def __init__(self, _path_project):
         self.final_test = None
         self.test = None
@@ -22,7 +22,7 @@ class ProjectTestOS:
         self.load_project_settings()
 
     def load_project_settings(self):
-        self.load_file_set = JsonSetting.load_file(self.path_project)
+        self.load_file_set = JsonSettingSupport.load_file(self.path_project)
         self.settings = self.load_file_set['Project']['Settings']
         self.name_project = self.settings['Name']
         self.index_project = self.settings['Index']

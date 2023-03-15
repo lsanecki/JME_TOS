@@ -1,7 +1,7 @@
 import time
-from Library.tester import *
-from Library.project import *
-import Library.deviceFun
+from Library.tester_service import *
+from Library.project_support import *
+import Library.device_procedures
 import datetime
 import threading
 import queue
@@ -35,7 +35,7 @@ class ProcessTest:
         _setting_directory = "Settings"
         _setting_file = "global_settings.json"
         _setting_tester_path = f"{_current_directory}/{_setting_directory}/{_setting_file}"
-        self.tester = DeviceTester(_setting_tester_path)
+        self.tester = DeviceTesterService(_setting_tester_path)
 
     def load_project_parameters(self, name_project):
         """
@@ -47,7 +47,7 @@ class ProcessTest:
         _current_directory = os.getcwd()
         _project_directory = "Projects"
         _setting_project_path = f"{_current_directory}/{_project_directory}/{name_project}/"
-        self.project = ProjectTestOS(_setting_project_path)
+        self.project = ProjectTestSupport(_setting_project_path)
         self.project.load_modules(self.tester.name, self.tester.version)
 
     def start(self):
@@ -138,7 +138,7 @@ class ProcessTest:
     def run_procedures_for_device(self, current_step):
         """
         Wykonuje wszystkie procedury/funkcje danego urzadzenia (testera) wedlug wczytanego kroku
-        funkcje urządzenia znajdują się w katalogu Library plik deviceFun.py
+        funkcje urządzenia znajdują się w katalogu Library plik device_procedures.py
         :param current_step: Parametry kroku do wykonania
         :type current_step: dict
         :return: Zwraca nazwe nastepnego kroku do wykonania
@@ -164,7 +164,7 @@ class ProcessTest:
         """
 
         print(procedure_parameters['NameFun'])
-        _lib_fun = Library.deviceFun
+        _lib_fun = Library.device_procedures
         _function_information = self.prepare_test_procedure_information(procedure_parameters, current_step['Name'])
         _threads = []
         self.call_procedure(procedure_parameters, _function_information, _lib_fun, _threads)

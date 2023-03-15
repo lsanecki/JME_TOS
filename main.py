@@ -1,5 +1,5 @@
-from Library.libJson import *
-import Library.deviceFun
+from Library.json_settings_support import *
+import Library.device_procedures
 import Projects.Mercury_TS.Mercury_TS
 import datetime
 import threading
@@ -131,7 +131,7 @@ def read_step_parameters(nr_step, step, step_test):
 
 
 def main():
-    set_json = JsonSetting.load_file("Projects/Mercury_TS/Project_settings/ProjectSettings.json")
+    set_json = JsonSettingSupport.load_file("Projects/Mercury_TS/Project_settings/ProjectSettings.json")
 
     # print(dir(fun_for_project))
 
