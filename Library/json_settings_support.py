@@ -21,7 +21,6 @@ class JsonSettingSupport:
         :rtype: bool
         """
 
-
         try:
             with open(_path_file, 'w') as f:
                 json.dump(_data_to_save, f)
@@ -75,7 +74,7 @@ def main():
     # print(type(JsonSetting.load_file("settings/global.json")))
     set_json = JsonSettingSupport.load_file("settings/global.json")
     print(set_json)
-    #JsonSetting.save_file("settings/", set_json)
+    # JsonSetting.save_file("settings/", set_json)
 
 
 if __name__ == '__main__':

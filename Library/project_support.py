@@ -38,13 +38,13 @@ class ProjectTestSupport:
         self.name_project = self.settings['Name']
         self.index_project = self.settings['Index']
         self.version_project = self.settings['Version']
-        self.labels_collection = self.settings['Labels']
-        self.software_collection = self.settings['Soft']
-        self.initialization_enabled = bool(self.settings['EnableInitStep'])
-        self.finalization_enabled = bool(self.settings['EnableFinalStep'])
-        self.test_initialization = self.settings_loaded_from_file['Project']['InitStep']
+        self.labels_collection = self.settings['LabelsCollection']
+        self.software_collection = self.settings['SoftwareCollection']
+        self.initialization_enabled = bool(self.settings['InitializationEnabled'])
+        self.finalization_enabled = bool(self.settings['FinalizationEnabled'])
+        self.test_initialization = self.settings_loaded_from_file['Project']['TestInitialization']
         self.test = self.settings_loaded_from_file['Project']['TestStep']
-        self.test_finalization = self.settings_loaded_from_file['Project']['FinalStep']
+        self.test_finalization = self.settings_loaded_from_file['Project']['TestFinalization']
 
     def load_test_modules(self, name_device, version_device):
         """

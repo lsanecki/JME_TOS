@@ -4,19 +4,19 @@
     "devices": [
       {
         "Name": "SignalMatrix",
-        "Parameters": ["100.100.0.10", 5000]
+        "InputData": ["100.100.0.10", 5000]
       },
       {
         "Name": "PowerMatrix",
-        "Parameters": ["100.100.0.11", 5000]
+        "InputData": ["100.100.0.11", 5000]
       },
       {
         "Name": "Printer",
-        "Parameters": ["100.100.1.50", 9100]
+        "InputData": ["100.100.1.50", 9100]
       },
       {
         "Name": "Measurer",
-        "Parameters": ["100.99.0.10", 5000]
+        "InputData": ["100.99.0.10", 5000]
       }
     ]
   }

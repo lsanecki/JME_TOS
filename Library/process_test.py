@@ -112,10 +112,10 @@ class ProcessTest:
 
         _current_step = self.load_selected_step(all_steps, name_step)
 
-        if bool(_current_step['OneTestForAllModule']):
+        if bool(_current_step['UseOnlyDeviceProcedures']):
             return self.run_procedures_for_device(_current_step)
         else:
-            if bool(_current_step['SetFlag']):
+            if bool(_current_step['StepByStepMode']):
                 self.run_step_by_step_procedures_for_test_sockets(_current_step)
             else:
                 self.run_procedures_for_test_sockets_in_parallel(_current_step)
@@ -147,10 +147,10 @@ class ProcessTest:
         :rtype: str
         """
 
-        for _device_procedure_parameters in current_step['Function']:
+        for _device_procedure_parameters in current_step['ListOfProcedures']:
             _status = self.start_procedure_of_the_device(current_step, _device_procedure_parameters)
             if _status[0] is False and bool(current_step['AlwaysRun']) is False:
-                return current_step['FailTestNextStep']
+                return current_step['NextStepForNOK']
 
         return current_step['NextStep']
 
@@ -166,7 +166,7 @@ class ProcessTest:
         """
 
         if self.debug:
-            print(procedure_parameters['NameFun'])
+            print(procedure_parameters['Name'])
         _device_procedure_library = Library.device_procedures
         _procedure_information = self.prepare_test_procedure_information(procedure_parameters, current_step['Name'])
         _threads = []
@@ -187,7 +187,7 @@ class ProcessTest:
         _imported_project_procedures = self.import_project_procedures()
         for _test_module_parameters in self.project.test_modules:
             for _test_socket_parameters in _test_module_parameters['Sockets']:
-                for _project_procedure_parameters in current_step['Function']:
+                for _project_procedure_parameters in current_step['ListOfProcedures']:
                     self.run_procedure_for_step_by_step_mode(
                         current_step, _project_procedure_parameters, _imported_project_procedures,
                         _test_module_parameters, _test_socket_parameters)
@@ -256,7 +256,7 @@ class ProcessTest:
         """
 
         if self.debug:
-            print(test_module_parameters, test_socket_parameters, procedure_parameters['NameFun'])
+            print(test_module_parameters, test_socket_parameters, procedure_parameters['Name'])
 
     def run_procedures_for_test_sockets_in_parallel(self, current_step):
         """
@@ -350,8 +350,8 @@ class ProcessTest:
         """
 
         _procedure_thread_queue = queue.Queue()
-        _procedure_thread = self.run_background_worker(imported_project_procedures, procedure_parameters['NameFun'],
-                                                       procedure_parameters['Parameters'], _procedure_thread_queue,
+        _procedure_thread = self.run_background_worker(imported_project_procedures, procedure_parameters['Name'],
+                                                       procedure_parameters['InputData'], _procedure_thread_queue,
                                                        procedure_parameters['Delay'], test_socket_procedure_collection)
         _thread_data = [_procedure_thread, _procedure_thread_queue, procedure_information]
         threads.append(_thread_data)
@@ -378,13 +378,13 @@ class ProcessTest:
             'Name': name_step,
             'Module': test_module_name,
             'Dut': test_socket_name,
-            'NameFunction': procedure_parameters['NameFun'],
+            'NameFunction': procedure_parameters['Name'],
             'Status': None,
             'ErrorInformation': None,
             'Date': None,
             'TestTime': None,
             'EndDate': None,
-            'Input': procedure_parameters['Parameters'],
+            'Input': procedure_parameters['InputData'],
             'Output': None,
             'Serial': None
         }
@@ -407,7 +407,7 @@ class ProcessTest:
         :return:
         """
 
-        for _procedure_parameters in current_step['Function']:
+        for _procedure_parameters in current_step['ListOfProcedures']:
             self.show_data_of_the_called_procedure(_procedure_parameters, test_module_parameters,
                                                    test_socket_parameters)
             if self.read_status_of_previous_steps(test_module_parameters['Name'], test_socket_parameters['Name']) \
