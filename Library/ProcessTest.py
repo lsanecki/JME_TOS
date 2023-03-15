@@ -1,8 +1,8 @@
 import time
-from Liblary.libJson import *
-from Liblary.testStep import *
-from Liblary.global_function import *
-import Liblary.deviceFun
+from Library.libJson import *
+from Library.testStep import *
+from Library.global_function import *
+import Library.deviceFun
 import datetime
 import threading
 import queue
@@ -427,7 +427,7 @@ class ProcessTest:
 
         if self.debug:
             self.show_function_info(_function, _step_test.nr)
-        _lib_fun = Liblary.deviceFun
+        _lib_fun = Library.deviceFun
 
         threads = []
         fun_info = self.prepare_function_info(_function['NameFun'], _step_test)

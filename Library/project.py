@@ -1,5 +1,5 @@
-from Liblary.libJson import *
-from Liblary.global_function import *
+from Library.libJson import *
+from Library.global_function import *
 
 
 class ProjectTestOS:

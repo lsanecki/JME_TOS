@@ -1,6 +1,6 @@
-from Liblary.ProcessTest_new import *
-from Liblary.tester import *
-from Liblary.project import *
+from Library.ProcessTest_new import *
+from Library.tester import *
+from Library.project import *
 
 import os
 
@@ -21,7 +21,7 @@ def main():
     '''
 
     process_test = ProcessTest('Mercury_TS2')
-    process_test.run()
+    process_test.start()
 
 
 if __name__ == '__main__':

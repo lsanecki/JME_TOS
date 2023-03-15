@@ -1,6 +1,6 @@
-from Liblary.libJson import *
-from Liblary.testStep import *
-import Liblary.deviceFun
+from Library.libJson import *
+from Library.testStep import *
+import Library.deviceFun
 import Projects.Mercury_TS.Mercury_TS
 import datetime
 import threading
@@ -37,7 +37,7 @@ def run_step(nr_step, test_steps):
                                                                   function['NameFun'],
                                                                   function['Parameters']))
 
-            lib_fun = Liblary.deviceFun
+            lib_fun = Library.deviceFun
             test_information = [step_test.nr, function['NameFun']]
 
             threads = []

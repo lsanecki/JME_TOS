@@ -1,4 +1,4 @@
-from Liblary.ProcessTest import *
+from Library.ProcessTest import *
 
 import os
 
