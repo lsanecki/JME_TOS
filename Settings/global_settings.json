@@ -1,5 +1,5 @@
 {
-  "Tester": {
+  "TesterMercury": {
     "version": "0.1.0"
   },
   "devices": [
@@ -22,6 +22,10 @@
       {
         "Name": "Sniffer",
         "InputData": ["SerialPort", "COM11", 9600]
+      },
+      {
+        "Name": "PowerSupply",
+        "InputData": ["SerialPort", "COM15", 9600]
       }
     ]
 }

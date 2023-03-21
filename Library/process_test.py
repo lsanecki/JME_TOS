@@ -468,7 +468,8 @@ class ProcessTest:
                 _received_data_from_the_completed_procedure = _item(procedure_input_parameters)
             _serial_number = None
             if len(_received_data_from_the_completed_procedure) > 2:
-                _serial_number = _received_data_from_the_completed_procedure[2]['Serial']
+                if not isinstance(_received_data_from_the_completed_procedure[2], tuple):
+                    _serial_number = _received_data_from_the_completed_procedure[2]['Serial']
 
             _end_time = datetime.datetime.now()
 

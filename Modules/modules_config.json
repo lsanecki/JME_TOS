@@ -8,15 +8,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.1", 5000]
+              "InputData": ["Ethernet", "100.99.1.1", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.1", 5000]
+              "InputData": ["Ethernet", "100.99.10.1", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.1", 5000]
+              "InputData": ["Ethernet", "100.99.20.1", 5000]
             }
           ]
         },
@@ -25,15 +25,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.2", 5000]
+              "InputData": ["Ethernet" ,"100.99.1.2", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.2", 5000]
+              "InputData": ["Ethernet","100.99.10.2", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.2", 5000]
+              "InputData": ["Ethernet" ,"100.99.20.2", 5000]
             }
           ]
         }
@@ -47,15 +47,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.3", 5000]
+              "InputData": ["Ethernet", "100.99.1.3", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.3", 5000]
+              "InputData": ["Ethernet", "100.99.10.3", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.3", 5000]
+              "InputData": ["Ethernet", "100.99.20.3", 5000]
             }
           ]
         },
@@ -64,15 +64,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.4", 5000]
+              "InputData": ["Ethernet", "100.99.1.4", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.4", 5000]
+              "InputData": ["Ethernet", "100.99.10.4", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.4", 5000]
+              "InputData": ["Ethernet", "100.99.20.4", 5000]
             }
           ]
         }
@@ -86,15 +86,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.5", 5000]
+              "InputData": ["Ethernet", "100.99.1.5", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.5", 5000]
+              "InputData": ["Ethernet", "100.99.10.5", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.5", 5000]
+              "InputData": ["Ethernet", "100.99.20.5", 5000]
             }
           ]
         },
@@ -103,15 +103,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.6", 5000]
+              "InputData": ["Ethernet", "100.99.1.6", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.6", 5000]
+              "InputData": ["Ethernet", "100.99.10.6", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.6", 5000]
+              "InputData": ["Ethernet", "100.99.20.6", 5000]
             }
           ]
         }
@@ -125,15 +125,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.7", 5000]
+              "InputData": ["Ethernet", "100.99.1.7", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.7", 5000]
+              "InputData": ["Ethernet", "100.99.10.7", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.7", 5000]
+              "InputData": ["Ethernet", "100.99.20.7", 5000]
             }
           ]
         },
@@ -142,15 +142,15 @@
           "Devices": [
             {
               "Name": "BarcodeReader",
-              "InputData": ["100.99.1.8", 5000]
+              "InputData": ["Ethernet", "100.99.1.8", 5000]
             },
             {
               "Name": "Camera",
-              "InputData": ["100.99.10.8", 5000]
+              "InputData": ["Ethernet", "100.99.10.8", 5000]
             },
             {
               "Name": "Microphone",
-              "InputData": ["100.99.20.8", 5000]
+              "InputData": ["Ethernet", "100.99.20.8", 5000]
             }
           ]
         }

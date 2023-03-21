@@ -1,0 +1,23 @@
+Name;Module;Dut;NameFunction;Status;ErrorInformation;Date;TestTime;EndDate;Input;Output;Serial
+Start;;;pause;True;0;2023-03-21 12:21:05.325675;0:00:00.250967;2023-03-21 12:21:05.576642;[250];(True, '0');
+PowerOffDut;module1;dut_left;power_230v;True;0;2023-03-21 12:21:05.577637;0:00:00.988653;2023-03-21 12:21:06.566290;['Off'];(True, '0');
+PowerOffDut;module1;dut_right;power_230v;True;0;2023-03-21 12:21:05.577637;0:00:00.580877;2023-03-21 12:21:06.158514;['Off'];(True, '0');
+PowerOffDut;module2;dut_left;power_230v;True;0;2023-03-21 12:21:05.578593;0:00:00.876621;2023-03-21 12:21:06.455214;['Off'];(True, '0');
+PowerOffDut;module2;dut_right;power_230v;True;0;2023-03-21 12:21:05.578593;0:00:00.517237;2023-03-21 12:21:06.095830;['Off'];(True, '0');
+PowerOffDut;module3;dut_left;power_230v;True;0;2023-03-21 12:21:05.579569;0:00:00.009767;2023-03-21 12:21:05.589336;['Off'];(True, '0');
+PowerOffDut;module3;dut_right;power_230v;True;0;2023-03-21 12:21:05.580547;0:00:00.741051;2023-03-21 12:21:06.321598;['Off'];(True, '0');
+PowerOffDut;module4;dut_left;power_230v;True;0;2023-03-21 12:21:05.580547;0:00:00.703480;2023-03-21 12:21:06.284027;['Off'];(True, '0');
+PowerOffDut;module4;dut_right;power_230v;True;0;2023-03-21 12:21:05.581522;0:00:00.120590;2023-03-21 12:21:05.702112;['Off'];(True, '0');
+Power_Matrix_OFF;;;set_power_matrix;True;0;2023-03-21 12:21:06.667914;0:00:00.711793;2023-03-21 12:21:07.379707;['all#A#0#off'];(True, '0');
+Power_Matrix_OFF;;;set_power_matrix;True;0;2023-03-21 12:21:07.481301;0:00:00.781477;2023-03-21 12:21:08.262778;['all#B#0#off'];(True, '0');
+Power_Matrix_OFF;;;set_power_matrix;True;0;2023-03-21 12:21:08.364333;0:00:00.085310;2023-03-21 12:21:08.449643;['all#C#0#off'];(True, '0');
+Signal_Matrix_OFF;;;set_signal_matrix;True;0;2023-03-21 12:21:08.551191;0:00:00.928870;2023-03-21 12:21:09.480061;['all#A#0#off'];(True, '0');
+Signal_Matrix_OFF;;;set_signal_matrix;True;0;2023-03-21 12:21:09.582975;0:00:00.860462;2023-03-21 12:21:10.443437;['all#B#0#off'];(True, '0');
+Signal_Matrix_OFF;;;set_signal_matrix;True;0;2023-03-21 12:21:10.546785;0:00:00.272181;2023-03-21 12:21:10.818966;['all#C#0#off'];(True, '0');
+Disconnect_Device;;;disconnect_multimeter;True;0;2023-03-21 12:21:10.820737;0:00:00.800385;2023-03-21 12:21:11.621122;[];(True, '0');
+Disconnect_Device;;;disconnect_signal_matrix;True;0;2023-03-21 12:21:11.622099;0:00:00.232972;2023-03-21 12:21:11.855071;[];(True, '0');
+Disconnect_Device;;;disconnect_power_matrix;True;0;2023-03-21 12:21:11.855071;0:00:00.325299;2023-03-21 12:21:12.180370;[];(True, '0');
+Disconnect_Device;;;disconnect_power_supply;True;0;2023-03-21 12:21:12.181116;0:00:00.562099;2023-03-21 12:21:12.743215;[];(True, '0');
+Disconnect_Device;;;disconnect_printer;True;0;2023-03-21 12:21:12.744986;0:00:00.920909;2023-03-21 12:21:13.665895;[];(True, '0');
+Final_3;;;fun_a;True;0;2023-03-21 12:21:13.667675;0:00:00.654024;2023-03-21 12:21:14.321699;['param1', 'param2', 'param3'];(True, '0');
+Final_3;;;fun_b;True;0;2023-03-21 12:21:14.323419;0:00:00.296046;2023-03-21 12:21:14.619465;['param1', 'param2', 'param3'];(True, '0');
