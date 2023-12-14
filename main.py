@@ -144,7 +144,7 @@ def main():
     final_step = set_json['Project']['FinalStep']
 
     print(project_setting)
-    # print(init_step)
+    print(init_step)
     print(len(test_step))
     # print(final_step)
 
