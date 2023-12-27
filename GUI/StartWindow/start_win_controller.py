@@ -5,7 +5,7 @@ import os
 from PyQt5 import QtCore
 from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
-from view import StartWinInterfaceUI
+from start_win_view import StartWinInterfaceUI
 
 
 class StartWinController(QWidget, StartWinInterfaceUI):
@@ -35,7 +35,7 @@ def main():
     app = QApplication(sys.argv)
     window = StartWinController()
 
-    file_qss = open("style.qss", 'r')
+    file_qss = open("start_win_style.qss", 'r')
 
     with file_qss:
         qss = file_qss.read()

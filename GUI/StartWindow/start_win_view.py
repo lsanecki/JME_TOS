@@ -34,10 +34,9 @@ class StartWinInterfaceUI(object):
 
         self.button_run_device = QPushButton("Uruchom")
         self.window_layout.addWidget(self.button_run_device)
-        
+
         self.button_close_device = QPushButton("Zakoncz")
         self.window_layout.addWidget(self.button_close_device)
-
 
 
 def main():
